@@ -46,6 +46,11 @@ class GameWonFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater?.inflate(R.menu.winner_menu,menu)
+        //This fallback code hides the score sharing option should the device not have a way of handling the intent
+        if (null == getShareIntent().resolveActivity(activity!!.packageManager)){
+            menu?.findItem(R.id.share)?.setVisible(false)
+        }
+
     }
 
     private fun getShareIntent() : Intent {
