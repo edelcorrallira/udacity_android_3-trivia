@@ -66,4 +66,9 @@
             app:argType="string"
             android:defaultValue="About" />
     </fragment>
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.example.android.navigation.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
 </navigation>
